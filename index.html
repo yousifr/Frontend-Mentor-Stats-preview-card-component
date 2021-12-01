@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <style>
+      body {
+        background-color: hsl(233, 47%, 7%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        scroll-behavior: smooth;
+      }
+      .container {
+        background-color: hsl(244, 38%, 16%);
+        height: 27rem;
+        width: 70rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 0.5rem;
+      }
+      .description {
+        padding: 0 4rem;
+      }
+
+      h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 3rem;
+        text-align: start;
+      }
+      h1 > span {
+        color: hsl(277, 64%, 61%);
+      }
+      .desc {
+        color: hsla(0, 0%, 100%, 0.75);
+        padding: 0 3rem 0 0;
+        font-size: 1.2rem;
+      }
+      .stat-heading {
+        display: flex;
+        color: hsla(0, 0%, 100%, 0.6);
+      }
+      .stat-heading > div {
+        margin: 0 5rem 0 0;
+      }
+      .stat-heading > div > :nth-child(odd) {
+        font-size: 1.5rem;
+        color: hsl(0, 0%, 100%);
+        margin-bottom: -1rem;
+      }
+      .img {
+        position: relative;
+      }
+
+      .image {
+        background-color: hsl(277, 64%, 61%, 0.5);
+        position: absolute;
+        color: white;
+        font-size: 5rem;
+        top: 0;
+        right: 0;
+        height: 40rem;
+        width: 33.8rem;
+      }
+      footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: azure;
+      }
+      a {
+        color: bisque;
+      }
+      @media screen and (max-width: 375px) {
+        .container {
+          display: grid;
+
+          width: 100vw;
+          height: 100vh;
+          overflow: scroll;
+          scroll-behavior: smooth;
+          overflow-x: hidden;
+        }
+        .img {
+          /* height: 90vh; */
+          order: -1;
+          /* width: 100vw; */
+        }
+        img {
+          height: 50vh;
+          width: 100%;
+        }
+        .image {
+          height: 50vh;
+        }
+        .description {
+          width: 100vw;
+        }
+        h1 {
+          text-align: center;
+          font-size: 2.6rem;
+        }
+        .desc {
+          text-align: center;
+          margin-left: 2rem;
+        }
+        .stat-heading {
+          display: grid;
+          justify-content: center;
+          margin-left: 3rem;
+        }
+        .stat-heading > div > p {
+          text-align: center;
+        }
+        footer {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <div class="description">
+          <h1>Get <span>insights</span> that help your business grow.</h1>
+          <p class="desc">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="stat-heading">
+            <div>
+              <p>10k+</p>
+              <p>Companies</p>
+            </div>
+            <div>
+              <p>314</p>
+              <p>Templates</p>
+            </div>
+            <div>
+              <p>12m+</p>
+              <p>Queries</p>
+            </div>
+          </div>
+        </div>
+        <div class="img">
+          <img src="./images/image-header-desktop.jpg" alt="" />
+          <div class="image"></div>
+        </div>
+      </div>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.yousifismail.com/" target="_blank">Yousif Ismail</a
+        >.
+      </footer>
+    </div>
+  </body>
+</html>
